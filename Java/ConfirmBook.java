@@ -16,7 +16,7 @@ public class ConfirmBook extends javax.swing.JFrame {
     public String Name;
     public String Sex;
     public String mobile;
-    public String aadhar;
+    public String email;
     public int age;
 
     /**
@@ -140,7 +140,7 @@ public class ConfirmBook extends javax.swing.JFrame {
         EnterDetails EnterDetailsObj = new EnterDetails();
         EnterDetailsObj.Name = this.Name;
         EnterDetailsObj.Selection = this.Selection;
-        EnterDetailsObj.aadhar = this.aadhar;
+        EnterDetailsObj.email = this.email;
         EnterDetailsObj.Sex = this.Sex;
         EnterDetailsObj.mobile = this.mobile;
         EnterDetailsObj.book_date = this.book_date;
@@ -166,7 +166,7 @@ public class ConfirmBook extends javax.swing.JFrame {
             PaymentObj.book_date = this.book_date;
             PaymentObj.Sex = this.Sex;
             PaymentObj.mobile = this.mobile;
-            PaymentObj.aadhar = this.aadhar;
+            PaymentObj.email = this.email;
             PaymentObj.age = this.age;
             PaymentObj.labelset();
             PaymentObj.setLocationRelativeTo(null);

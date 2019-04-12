@@ -18,14 +18,14 @@ public class EnterDetails extends javax.swing.JFrame {
     public String Name;
     public String Sex;
     public String mobile;
-    public String aadhar;
+    public String email;
     public int age;
     
     public void SetValues(){
         jTextField1.setText(this.Name);
         jTextField2.setText(Integer.toString(this.age));
         jTextField3.setText(this.Sex);
-        jTextField4.setText(this.aadhar);
+        jTextField4.setText(this.email);
         jTextField5.setText(this.mobile);
     }
 
@@ -225,7 +225,7 @@ public class EnterDetails extends javax.swing.JFrame {
             ConfirmBookObj.Name = jTextField1.getText();
             ConfirmBookObj.age = Integer.parseInt(jTextField2.getText());
             ConfirmBookObj.Sex = jTextField3.getText();
-            ConfirmBookObj.aadhar = jTextField4.getText();
+            ConfirmBookObj.email = jTextField4.getText();
             ConfirmBookObj.mobile = jTextField5.getText();
             ConfirmBookObj.setLocationRelativeTo(null);
             ConfirmBookObj.setVisible(true);

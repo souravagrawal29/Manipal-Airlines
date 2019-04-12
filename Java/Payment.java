@@ -21,7 +21,7 @@ public class Payment extends javax.swing.JFrame {
     public String Name;
     public String Sex;
     public String mobile;
-    public String aadhar;
+    public String email;
     public int age;
     public String id;
 
@@ -277,7 +277,7 @@ public class Payment extends javax.swing.JFrame {
             	   ResultSetObj = StatementObj.executeQuery(qr3);
                }while(ResultSetObj.next());
                this.Payment_no = this.Ticket_no;
-               String qr2= "INSERT INTO Tickets VALUES ('" + this.Ticket_no+ "', '"+ Flight_nos +"','"+this.Name+"','"+this.Sex+"', '"+Integer.toString(age)+"','"+this.aadhar+"','"+this.mobile+ "', '" + this.book_date + "')";
+               String qr2= "INSERT INTO Tickets VALUES ('" + this.Ticket_no+ "', '"+ Flight_nos +"','"+this.Name+"','"+this.Sex+"', '"+Integer.toString(age)+"','"+this.email+"','"+this.mobile+ "', '" + this.book_date + "')";
                 StatementObj.executeUpdate(qr2);
                String qr3="UPDATE Booked SET seats_left=seats_left-1 WHERE Flight_no = '" +Flight_nos+"'AND book_date = '" + this.book_date+ "'";
                 StatementObj.executeUpdate(qr3);
