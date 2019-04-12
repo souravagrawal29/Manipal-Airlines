@@ -83,7 +83,7 @@ public class EnterDetails extends javax.swing.JFrame {
         jLabel4.setText("Sex:");
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Aadhar No.:");
+        jLabel5.setText("Email:");
 
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -205,14 +205,14 @@ public class EnterDetails extends javax.swing.JFrame {
         if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jTextField5.getText().equals("")){
             JOptionPane.showMessageDialog(null, "All fields are mandatory.", "Invalid", JOptionPane.INFORMATION_MESSAGE);
         }
-        else if(Integer.parseInt(jTextField2.getText()) < 6){
-            JOptionPane.showMessageDialog(null, "Tickets are not for children below 6.", "Underage", JOptionPane.INFORMATION_MESSAGE);
+        else if(Integer.parseInt(jTextField2.getText()) < 3){
+            JOptionPane.showMessageDialog(null, "Tickets are not for children below 3.", "Underage", JOptionPane.INFORMATION_MESSAGE);
         }
         else if(!(jTextField3.getText().equals("M") || jTextField3.getText().equals("F"))){
             JOptionPane.showMessageDialog(null, "Enter M for male and F for female.", "Invalid sex", JOptionPane.INFORMATION_MESSAGE);
         }
-        else if(jTextField4.getText().length() != 12){
-            JOptionPane.showMessageDialog(null, "Enter your valid aadhaar no.", "Invalid aadhaar", JOptionPane.INFORMATION_MESSAGE);
+        else if(jTextField4.getText().substring('@')<0){
+            JOptionPane.showMessageDialog(null, "Enter a valid email", "Invalid Email", JOptionPane.INFORMATION_MESSAGE);
         }
         else if(jTextField5.getText().length() != 10){
             JOptionPane.showMessageDialog(null, "Enter your valid mobile no.", "Invalid mobile no", JOptionPane.INFORMATION_MESSAGE);
